@@ -1,0 +1,36 @@
+{
+    "name": "pozo/bases-de-datos",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Gymbro\\Classes\\": "src/classes/"
+        },
+        "files": [
+            "src/functions.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Gymbro\\Classes\\": "src/classes/"
+        },
+        "files": [
+            "src/functions.php"
+        ]
+    },
+    "authors": [
+        {
+            "name": "pozo",
+            "email": "pozo.erp.a@gmail.com",
+            "homepage": "https://github.com/erpozo",
+            "role": "Developer"
+        },
+        {
+            "name": "Alberto Sánchez Torreblanca",
+            "email": "albertost876.ast@gmail.com",
+            "homepage": "https://albertost.sytes.net/",
+            "role": "Developer"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
