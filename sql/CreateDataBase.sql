@@ -36,11 +36,25 @@ create table rutina_ejercicio (
     recursion INT
 );
 
-create table usuario_rutina (
+create table usuario_hace_rutina (
     fk_usuario_ID INT NOT NULL,
     FOREIGN KEY (fk_usuario_ID) REFERENCES usuario (usuario_ID),
     fk_rutina_ID INT NOT NULL,
     FOREIGN KEY (fk_rutina_ID) REFERENCES rutina (rutina_ID),
     inscripcion timestamp default current_timestamp(),
     completado INT
+);
+
+create table usuario_guarda_rutina (
+    fk_usuario_ID INT NOT NULL,
+    FOREIGN KEY (fk_usuario_ID) REFERENCES usuario (usuario_ID),
+    fk_rutina_ID INT NOT NULL,
+    FOREIGN KEY (fk_rutina_ID) REFERENCES rutina (rutina_ID)
+);
+
+create table usuario_guarda_ejercicio (
+    fk_usuario_ID INT NOT NULL,
+    FOREIGN KEY (fk_usuario_ID) REFERENCES usuario (usuario_ID),
+    fk_ejercicio_ID INT NOT NULL,
+    FOREIGN KEY (fk_ejercicio_ID) REFERENCES ejercicio (ejercicio_ID)
 );

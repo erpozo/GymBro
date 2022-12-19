@@ -1,13 +1,11 @@
 <?php
     include "./vendor/autoload.php";
     session_start();
-
-    if (!isset($_SESSION["user"]) || empty($_SESSION["user"])) {
-        header("Location: ./index.php");
-        exit();
-    }
-
     $user = $_SESSION["user"];
+    if (isset($_POST['logout'])) {
+        $_SESSION["user"] = null;
+    }    
+    comprobarUsuario();
 ?>
 <!DOCTYPE html>
 
@@ -26,5 +24,9 @@
         </h1>
         <a href="./rutinas.php">Rutinas</a>
         <a href="./ejercicios.php">Ejercicios</a>
+
+        <form action="./home.php" method='post'>
+            <input type='submit' name='logout' value='LogOut'>
+        </form>
     </body>
 </html>

@@ -3,6 +3,14 @@
 use Gymbro\Classes\DB;
 use Gymbro\Classes\User;
 
+
+function comprobarUsuario(){
+    if (!isset($_SESSION["user"]) || empty($_SESSION["user"])) {
+        header("Location: ./index.php");
+    }
+}
+
+
 function registrarUsuario(string $username, string $email, string $pw): User|null {
     if (
         empty($username) ||
@@ -73,16 +81,31 @@ function newEjercicio(string $nombreEjercicio, string $descripcion, string $tipo
     return null;
 }
 
-function tablaEjercicios(int $usuario_ID){
+function ejerciciosUser(int $usuario_ID){
     $connect = new DB();
-    $result = $connect -> Select("SELECT * FROM ejercicio WHERE fk_usuario_ID = '$usuario_ID'");
+    return $connect -> Select("SELECT * FROM ejercicio WHERE fk_usuario_ID = '$usuario_ID'");
+
+}
+
+function ejerciciosAjenos(int $usuario_ID):array{
+    $connect = new DB();
+    return $connect -> Select("SELECT * FROM ejercicio WHERE fk_usuario_ID != '$usuario_ID'");
+}
+
+
+function ejercicios():array{
+    $connect = new DB();
+    return $connect -> Select("SELECT * FROM ejercicio");
+}
+
+function tablaEjercicios(array $ejercicios){
     echo"<tr>
             <th>Nombre</th>
             <th>Descripcion</th>
             <th>Tipo</th>
             <th>Opciones</th>
         </tr>";
-    foreach ($result as $ejercicio){
+    foreach ($ejercicios as $ejercicio){
         echo 
         "<tr>".
             "<td>" . $ejercicio["nombre"] . "</td>".

@@ -12,6 +12,7 @@
     </head>
 
     <body>
+        <img src="./sources/img/Gymbro.png" width="200" height="125">
         <form action="./index.php" method="post">
             <label for="username">Username:</label><br>
             <input type="text" name="username"><br>

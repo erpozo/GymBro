@@ -1,8 +1,8 @@
 <?php
     include "./vendor/autoload.php";
     session_start();
-
     $user = $_SESSION["user"];
+    comprobarUsuario();
 ?>
 <!DOCTYPE html>
 
@@ -19,6 +19,9 @@
                 echo "Ejercicios de " . $user->getUsername();
             ?>
         </h1>
+        <form action="./home.php" method='post'>
+            <input type='submit' name='logout' value='LogOut'>
+        </form>
         <legend>Crear Ejercicio</legend>
         <form action="./ejercicios.php" method="post">
             <label for="nombreEjercio">Nombre Ejercicio:</label><br>
@@ -44,12 +47,17 @@
             if(isset($_POST['delete'])){
                 eliminarEjercicio($_POST['ejercicio']);
             }
-            
         ?>
 
         <table>
             <?php
-                tablaEjercicios($user->getId());
+                tablaEjercicios(ejerciciosUser($user->getId()));
+            ?>
+        </table>
+        <h2>Explorar Ejercicios</h2>
+        <table>
+            <?php
+                tablaEjercicios(ejerciciosAjenos($user->getId()));
             ?>
         </table>
     </body>
