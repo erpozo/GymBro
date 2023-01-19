@@ -58,3 +58,10 @@ create table usuario_guarda_ejercicio (
     fk_ejercicio_ID INT NOT NULL,
     FOREIGN KEY (fk_ejercicio_ID) REFERENCES ejercicio (ejercicio_ID)
 );
+
+create table usuario_sigue_usuario (
+    fk_usuario_seguido_ID INT NOT NULL,
+    FOREIGN KEY (fk_usuario_seguido_ID) REFERENCES usuario (usuario_ID),
+    fk_usuario_seguidor_ID INT NOT NULL,
+    FOREIGN KEY (fk_usuario_seguidor_ID) REFERENCES usuario (usuario_ID),
+);

@@ -116,6 +116,24 @@ function tablaEjercicios(array $ejercicios){
     }
 }
 
+function ejerciciosRutinas(array $ejercicios){
+    echo"<tr>
+            <th>Nombre</th>
+            <th>Descripcion</th>
+            <th>Tipo</th>
+            <th>Opciones</th>
+        </tr>";
+    foreach ($ejercicios as $ejercicio){
+        echo 
+        "<tr>".
+            "<td>" . $ejercicio["nombre"] . "</td>".
+            "<td>" . $ejercicio["descripcion"] . "</td>".
+            "<td>" . $ejercicio["tipo"] . "</td>".
+            "<td> <form method='post'> <input type='hidden' name='ejercicio' value='" . $ejercicio["ejercicio_ID"] . "'> <input type='submit' name='delete' value='borrar'> </form> </td>".
+        "</tr>";
+    }
+}
+
 function eliminarEjercicio(int $ejercicio_ID){
     $connect = new DB();
     $connect -> Remove("DELETE FROM ejercicio WHERE ejercicio_ID = '$ejercicio_ID'");

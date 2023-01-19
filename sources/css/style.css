@@ -1,7 +1,65 @@
+/*
+
+* {
+    margin: 0 auto;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+	border: none;
+	outline: none;
+}
+*/
 :root {
-    --main-bg-color: #5ED4FF;
+    --main-color: #197394;
+    --second-color: #5ED4FF;
+    --third-color: #3DB5E0;
+    --quarter-color: #945C1F;
+    --fifth-color: #E07400;
 }
 
 body {
-    background-color: var(--main-bg-color);
+    background-color: var(--main-color);
+    padding: 0 2vh;
 }
+
+.menuform {
+    background-color: var(--second-color);
+    width: 100%;
+    padding: auto;
+    margin: auto;
+}
+
+.menuform * {
+    margin: auto;
+}
+
+.ejercicioRutina {
+    background-color: var(--quarter-color);
+    border: 1px solid;
+    border-radius: 5px;
+    padding: 2px;
+    margin: 2px;
+    float: left;
+}
+
+input {
+    border-radius: 5px;
+}
+
+/*
+.menuform {
+    width: 25vw;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--second-color);
+}
+
+.menuform * {
+
+    display: block;
+
+}
+
+*/

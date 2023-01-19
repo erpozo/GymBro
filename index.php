@@ -12,18 +12,20 @@
     </head>
 
     <body>
-        <img src="./sources/img/Gymbro.png" width="200" height="125">
-        <form action="./index.php" method="post">
-            <label for="username">Username:</label><br>
-            <input type="text" name="username"><br>
+        <div class="menuform">
+            <img src="./sources/img/Gymbro.png" width="200" height="125">
+            <form action="./index.php" method="post">
+                <label for="username">Username:</label><br>
+                <input type="text" name="username"><br>
 
-            <label for="password">PassWord:</label><br>
-            <input type="password" name="password"><br>
+                <label for="password">PassWord:</label><br>
+                <input type="password" name="password"><br>
 
-            <input type="submit" name="login" value="Submit">
-        </form>
+                <input type="submit" name="login" value="Submit">
+            </form>
 
-        <a href="./register.php">Registrate</a>
+            <a href="./register.php">Registrate</a>
+        </div>
 
         <?php
             if (isset(($_POST['login']))) {
