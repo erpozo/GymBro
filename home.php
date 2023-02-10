@@ -17,6 +17,11 @@
     </head>
 
     <body>
+        <div class="centerdiv">
+            <a href="./ajustes.php">
+                <img src="./sources/img/Ajustes.png" alt="Ajustes" width="50" height="50">
+            </a>
+        </div>
         <h1>
             <?php
                 echo "Bienvenido a Gymbro " . $user->getUsername();

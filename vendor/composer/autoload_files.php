@@ -7,4 +7,5 @@ $baseDir = dirname($vendorDir);
 
 return array(
     '3e79834cb1e35b292731e8b9f7cd2688' => $baseDir . '/src/functions.php',
+    '1a2e2030babbd473d0265ab044c497b5' => $baseDir . '/src/user.php',
 );

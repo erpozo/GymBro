@@ -14,7 +14,8 @@
             "Gymbro\\Classes\\": "src/classes/"
         },
         "files": [
-            "src/functions.php"
+            "src/functions.php",            
+            "src/user.php"
         ]
     },
     "authors": [
@@ -22,12 +23,6 @@
             "name": "pozo",
             "email": "pozo.erp.a@gmail.com",
             "homepage": "https://github.com/erpozo",
-            "role": "Developer"
-        },
-        {
-            "name": "Alberto Sánchez Torreblanca",
-            "email": "albertost876.ast@gmail.com",
-            "homepage": "https://albertost.sytes.net/",
             "role": "Developer"
         }
     ],

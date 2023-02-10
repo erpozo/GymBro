@@ -30,6 +30,12 @@ class User {
     public function getPw(): string {
         return $this -> pw;
     }
+
+    public static function comprobarUsuario(){
+        if (!isset($_SESSION["user"]) || empty($_SESSION["user"])) {
+            header("Location: ./index.php");
+        }
+    }
 }
 
 ?>

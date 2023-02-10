@@ -65,3 +65,17 @@ create table usuario_sigue_usuario (
     fk_usuario_seguidor_ID INT NOT NULL,
     FOREIGN KEY (fk_usuario_seguidor_ID) REFERENCES usuario (usuario_ID),
 );
+
+create table reportes (
+	reportes_ID INT AUTO_INCREMENT PRIMARY KEY,
+    fk_usuario_reporta_ID INT NOT NULL,
+    FOREIGN KEY (fk_usuario_seguido_ID) REFERENCES usuario (usuario_ID),
+    fk_usuario_reportado_ID INT NOT NULL,
+    FOREIGN KEY (fk_usuario_seguidor_ID) REFERENCES usuario (usuario_ID),
+    descripcion CHAR(255)
+);
+
+create table gmailbaneados (
+	gmailbaneados_ID INT AUTO_INCREMENT PRIMARY KEY,
+    email CHAR(100) NOT NULL UNIQUE
+);

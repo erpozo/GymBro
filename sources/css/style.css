@@ -1,14 +1,11 @@
-/*
-
 * {
-    margin: 0 auto;
-	padding: 0;
-	list-style: none;
-	text-decoration: none;
-	border: none;
-	outline: none;
+    margin:0;
+    padding: 0;
+    border: none;
+    font-size: 3vh;
 }
-*/
+
+
 :root {
     --main-color: #197394;
     --second-color: #5ED4FF;
@@ -18,48 +15,40 @@
 }
 
 body {
-    background-color: var(--main-color);
-    padding: 0 2vh;
-}
-
-.menuform {
-    background-color: var(--second-color);
-    width: 100%;
-    padding: auto;
-    margin: auto;
-}
-
-.menuform * {
-    margin: auto;
-}
-
-.ejercicioRutina {
-    background-color: var(--quarter-color);
-    border: 1px solid;
-    border-radius: 5px;
-    padding: 2px;
-    margin: 2px;
-    float: left;
-}
-
-input {
-    border-radius: 5px;
-}
-
-/*
-.menuform {
-    width: 25vw;
-    height: 60vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     background-color: var(--second-color);
 }
 
-.menuform * {
-
-    display: block;
-
+.centerdiv{
+    margin-left: auto;
+    margin-right: auto;
 }
 
-*/
+
+.menuform input{
+    margin: 2px 0px;
+    border: solid 1px;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+input[type="submit"]{
+    background-color: var(--fifth-color);
+    padding: 5px 30px;
+    margin: 10px 0px;
+    border-radius: 20px;
+    border: solid 1px var(--quarter-color);
+}
+
+input[type="submit"]:hover{
+    color: white;
+    cursor: pointer;
+}
+
+.textcenter{
+    text-align: center;
+}
+
+.topbotmargin {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}

@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => 'pozo/bases-de-datos',
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
-        'reference' => NULL,
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
+        'reference' => '6dadb0892deb626759470ba78862fe9a4746eec6',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -11,9 +11,9 @@
     ),
     'versions' => array(
         'pozo/bases-de-datos' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
-            'reference' => NULL,
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'reference' => '6dadb0892deb626759470ba78862fe9a4746eec6',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
